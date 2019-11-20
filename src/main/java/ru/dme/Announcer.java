@@ -1,13 +1,14 @@
 package ru.dme;
 
-public class Announcer {
-    public static void welcome() {
+class Announcer {
+    static void welcome() {
         System.out.println("" +
                 "Здравствуйте! \n" +
                 "Вводите в консоль ИННы через Enter.\n" +
-                "Если вы закончите ввод, введите exit");
+                "Чтобы закончить ввод, введите \"exit\"");
     }
-    private static void info(){
+
+    private static void info() {
         System.out.println("Коды перед ИНН обозначают следующее:\n" +
                 "0 - Налогоплательщик зарегистрирован в ЕГРН и имел статус действующего в указанную дату\n" +
                 "1 - Налогоплательщик зарегистрирован в ЕГРН, но не имел статус действующего в указанную дату\n" +
@@ -22,10 +23,13 @@ public class Announcer {
                 "11 - некорректный формат даты\n" +
                 "12 - некорректная дата (ранее 01.01.1991 или позднее текущей даты)\n");
     }
-    public static void print(String message){
-        System.out.println(message);
-        if(!message.contains("Ошибка")) {
-            info();
+
+    static void print(String message) {
+        if (!(message == null)) {
+            System.out.println(message);
+            if (!message.contains("Ошибка")) {
+                info();
+            }
         }
     }
 }
