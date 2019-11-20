@@ -4,9 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ConsoleReader {
+class ConsoleReader {
 
-    public String read() throws IOException {
+    String read() throws IOException {
         StringBuilder request = new StringBuilder();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         while (true) {
