@@ -1,11 +1,11 @@
 package ru.dme;
-
+//This class helps to inform user about start information (how to use application), response from nalog.ru and information about state codes of INN
 class Announcer {
     static void welcome() {
         System.out.println("" +
                 "Здравствуйте! \n" +
                 "Вводите в консоль ИННы через Enter.\n" +
-                "Чтобы закончить ввод, введите \"exit\"");
+                "Чтобы закончить ввод, введите \"stop\"");
     }
 
     private static void info() {
