@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+//This class is getting request from ConsoleReader and send it to nalog.ru, then getting respnse
 class Inspector {
 
     private static final Logger LOGGER = LogManager.getLogger(Inspector.class.getName());
@@ -37,9 +37,7 @@ class Inspector {
 
             CloseableHttpClient httpclient = HttpClients.createDefault();
 
-            HttpResponse httpresponse = httpclient.execute(post);
-
-            return new BasicResponseHandler().handleResponse(httpresponse);
+            return new BasicResponseHandler().handleResponse(httpclient.execute(post));
         } catch (IOException e) {
             LOGGER.error("Connection issue", e);
             return null;
